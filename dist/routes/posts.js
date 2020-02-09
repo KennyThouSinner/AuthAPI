@@ -1,0 +1,12 @@
+const router = require('express').Router();
+const verify = require('./verify');
+router.get('/posts', verify.auth, (req, res) => {
+    res.json({
+        posts: {
+            title: "My first post",
+            description: "Random"
+        }
+    });
+});
+module.exports = router;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9zdHMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvcm91dGVzL3Bvc3RzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sTUFBTSxHQUFHLE9BQU8sQ0FBQyxTQUFTLENBQUMsQ0FBQyxNQUFNLEVBQUUsQ0FBQztBQUMzQyxNQUFNLE1BQU0sR0FBRyxPQUFPLENBQUMsVUFBVSxDQUFDLENBQUM7QUFFbkMsTUFBTSxDQUFDLEdBQUcsQ0FBQyxRQUFRLEVBQUUsTUFBTSxDQUFDLElBQUksRUFBRSxDQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsRUFBRTtJQUU1QyxHQUFHLENBQUMsSUFBSSxDQUFDO1FBQ04sS0FBSyxFQUFFO1lBQ0osS0FBSyxFQUFFLGVBQWU7WUFDdEIsV0FBVyxFQUFFLFFBQVE7U0FDdkI7S0FDSCxDQUFDLENBQUE7QUFDTCxDQUFDLENBQUMsQ0FBQztBQUVILE1BQU0sQ0FBQyxPQUFPLEdBQUcsTUFBTSxDQUFDIn0=
